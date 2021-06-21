@@ -1,0 +1,22 @@
+{% autoescape false %} 
+  <!-- Begin search form 504 NL -->
+  <div class="ui text container">
+    <div id="search" class="ui middle aligned center aligned grid">
+      <form class="ui teal inverted form" name="search" action="{{ action }}" method="get">
+	    <div class="ui stacked secondary segment">
+		  <div class="fields">
+		    <div class="ui left icon input eleven wide field">
+              <i class="search icon"></i>
+              <input class="search_string" required="required" type="text" id="string" name="string" placeholder="search string"/>
+            </div>
+            <div class="two wide field">
+              <button class="ui primary button" name="lep_search" id="lep_search" name="Submit" value="{{ MOD_SEARCH["Search"] }}" type="submit" ><i class="search icon"></i></button>
+            </div>
+          </div>
+        </div>
+	  </form>
+	</div>
+ </div>	
+<!-- END frontend search -->
+{% endautoescape %}
+      

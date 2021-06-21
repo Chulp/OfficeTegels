@@ -1,0 +1,53 @@
+/**
+ *  @template       fomantic based OfficeTegels template
+ *  @version        see info.php of this template
+ *  @author         Gerard Smelt
+ *  @copyright      2014-2021 ContractHulp
+ *  @license        http://creativecommons.org/licenses/by/3.0/
+ *  @license terms  see info.php of this template
+ *  @platform       see info.php of this template
+ */
+/* history template engine  
+ * 20201208 initial version 
+ */
+
+/* Link Formatting */	
+#main-navigation	{ float: left;	padding-top: 1px;}
+#main-navigation li { float: left;	position: relative;	padding: 5px 0px 0px 0px; }
+#main-navigation ul li a { font-size: 20px; font-weight: bolder; color: #111; display: block; text-decoration: none; padding: 5px 20px 25px 0px;}
+
+#main-navigation ul li ul	{ position: absolute; width: 11em; margin: 0; display: none; text-transform: none; background-color: #DBDBDB; width: 150px;}
+#main-navigation ul li ul	{ position: absolute; border-top: 1px solid #0FBE7C; top: 35px; width: 140px;}								
+#main-navigation ul li ul li { float: left;	position: relative;	padding: 0px 0px 0px 0px; }
+#main-navigation ul li ul li a { display: block; color: #151515; background-color: #E3E3E3; text-decoration: none; padding: 0px 20px 25px 0px;}
+
+#main-navigation ul li ul li ul		{ left: 110px; top: -1px; width: 140px; }
+#main-navigation ul li ul li ul li 	{ float: left; position: relative; padding: 0px 0px 0px 0px; }
+#main-navigation ul li ul li ul li a { display: block; color: #151515; background-color: #E3E3E3; text-decoration: none; padding: 0px 7px 7px 0px;}
+
+/* hoover Formatting */
+#main-navigation ul li:hover ul ul, 
+#main-navigation ul ul li:hover ul ul { color: #151515; background-color: #E3E3E3;	width: 11em; padding: 7px 0px 7px 0px; }
+#main-navigation ul ul ul li:hover ul ul { display: none; z-index: 9999; }
+
+#main-navigation ul li:hover ul, 
+#main-navigation ul ul li:hover ul, 
+#main-navigation ul ul ul li:hover ul, 
+#main-navigation ul ul ul ul li:hover ul	{ display:block; }
+
+#main-navigation ul li.current-menu-item ul li a, 
+#main-navigation ul li ul li.current-menu-item a,
+#main-navigation ul li.current_page_ancestor ul li a, 
+#main-navigation ul li.current-menu-ancestor ul li a,
+#main-navigation ul li.current_page_item ul li a	{ float: none; line-height: 20px; font-size: 13px; font-weight: normal; width: 140px; height: 100%; padding: 0px 0px; color: #666666; }
+#main-navigation ul li ul li a:hover, 
+#main-navigation ul li ul li:hover > a, 
+#main-navigation ul li.current-menu-item ul li a:hover	{ background: none repeat scroll 0 0 rgba(255, 255, 255, 1); width: 140px;  color: #0FBE7C; }
+#main-navigation select	{ display: none; }
+
+@media only screen and (max-width: 768px) {
+ 	#main-navigation, 
+	.ui.fixed.menu						{ display: none !important; }
+	.secondary.pointing.menu .toc.item 	{ display: block; }
+	.secondary.pointing.menu .item 		{ display: none; }
+}
